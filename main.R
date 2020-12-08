@@ -4,6 +4,7 @@
 source('Sidebar.R')
 source('Body.R')
 source('Header.R')
+source('Server.R')
 source('utilities.R')
 
 
@@ -28,10 +29,13 @@ ui <- dashboardPage(
 
 # Creates Server object
 server <- function(input, output) {
-  
+
+  output <- Server(input, output)
   
 }
 
 
 # Creates Shiny App
 shinyApp(ui, server)
+
+

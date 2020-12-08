@@ -6,8 +6,11 @@ Header<- function (){
   check <- check_packages(required_packages)
   
   # Creates Header
-  header <- dashboardHeader(title = "Historicals")
+  header <- dashboardHeader(title = "Accesspoint")
   
   # Returns header from function
   return(header)
+  
 }
+
+

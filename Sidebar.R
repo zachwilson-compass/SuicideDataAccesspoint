@@ -23,7 +23,8 @@ Sidebar <- function (){
      
     ),
     hr(),
-    h4('Filters'),
+    hr(),
+    tags$h4('Filters', align='center'),
     dateRangeInput('dateRange',
                    label = 'Date Range',
                    start = Sys.Date()-365, end = Sys.Date(),

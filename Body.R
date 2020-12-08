@@ -5,32 +5,25 @@ Body <- function (){
   required_packages <- c('shiny', 'shinydashboard')
   check <- check_packages(required_packages)
   
+  # Sources pages
+  sourceMultiple('pages', '*.R')
   
+  
+  # Creates body
   body <- dashboardBody(
 
     tabItems(
-      tabItem(tabName = "overview",
-              h2("Overview Dashboard"),
-              fluidRow(
-                valueBox(200, 'Suicides',icon=icon('user'), color='red'),
-                valueBox('Firearm', 'Top Weapon',icon=icon('cog'), color='red')
-              )
-        ),
+      getPageOverviewDashboard(),
       
       tabItem(tabName = 'focus-1',
               h2('Focused Dashboard')),
 
-      tabItem(tabName='report-1',
-              h2('Report 1')),
+      getPageReport1(),
+      getPageReport2(),
+      getPageReport3(),
+
+      getPageAbout()
       
-      tabItem(tabName='report-2',
-              h2('Report 2')),
-      
-      tabItem(tabName='report-3',
-              h2('Report 3')),
-      
-      tabItem(tabName = 'about',
-              h2('About This Application'))
       
       
     )

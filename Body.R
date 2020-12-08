@@ -12,8 +12,8 @@ Body <- function (){
       tabItem(tabName = "overview",
               h2("Overview Dashboard"),
               fluidRow(
-                valueBox(200, 'Suicides',icon=icon('user'), color='blue'),
-                valueBox('Firearm', 'Top Weapon',icon=icon('cog'), color='blue')
+                valueBox(200, 'Suicides',icon=icon('user'), color='red'),
+                valueBox('Firearm', 'Top Weapon',icon=icon('cog'), color='red')
               )
         ),
       

@@ -23,19 +23,12 @@ sidebar <- Sidebar()
 ui <- dashboardPage(
   header,
   sidebar,
-  body
+  body,
+  skin='red'
 )
 
 
-# Creates Server object
-server <- function(input, output) {
-
-  output <- Server(input, output)
-  
-}
-
-
 # Creates Shiny App
-shinyApp(ui, server)
+shinyApp(ui, Server)
 
 

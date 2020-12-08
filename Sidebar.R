@@ -23,16 +23,36 @@ Sidebar <- function (){
      
     ),
     hr(),
-    #airDatepickerInput('fromDate', 'From'),
-    #airDatepickerInput('toDate', 'To'),
+    h4('Filters'),
+    dateRangeInput('dateRange',
+                   label = 'Date Range',
+                   start = Sys.Date()-365, end = Sys.Date(),
+                   separator = ' to ', 
+                   weekstart = 1
+                   ), 
+    actionButton("clearDateRange", 
+                 "Clear Date Range",
+                 width = '85%'),
     pickerInput('countyPicker', 
-                'County', 
+                'County of Residence', 
                 choices = getGeorgiaCountyList(), 
                 multiple = TRUE,
                 options = list(
                   `actions-box` = TRUE,
-                  `selected-text-format` = "count > 3"
-                ))
+                  `selected-text-format` = 'count > 3',
+                  `none-selected-text` = 'Nothing Filtered'
+                )
+        ),
+    pickerInput('weaponPicker',
+                'Weapon',
+                choices = getWeaponsList(),
+                multiple = TRUE,
+                options = list(
+                  `actions-box` = TRUE,
+                  `selected-text-format` = 'count > 3',
+                  `none-selected-text` = 'Nothing Filtered'
+                )
+        )
 
   )
   

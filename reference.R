@@ -163,3 +163,10 @@ getGeorgiaCountyList <- function() {
   
   return(output)
 }
+
+
+getWeaponsList <- function(){
+  output <- c('Knife', 'Firearm')
+  
+  return(output)
+}

@@ -18,7 +18,6 @@ sourceMultiple <- function(path, pattern){
   pattern_files <- list.files(path = path, pattern=pattern)
   for (f in pattern_files){
     source(paste0(path,'/',f))
-    print(f)
   }
   
   

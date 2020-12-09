@@ -1,8 +1,8 @@
+# Sources
+source('utilities.R')
+
+
 getData <- function() {
-  
-  # Sources
-  source('utilities.R')
-  
   
   # Check Packages
   required_packages <- c('tidyverse', 'lubridate')
@@ -26,6 +26,10 @@ getData <- function() {
 }
 
 getData_mannerofdeath <- function(){
+  # Check Packages
+  required_packages <- c('dplyr')
+  check <- check_packages(required_packages)
+  
   output <- getData() %>% 
     select(manner_of_death_label) %>% 
     unique()
@@ -34,6 +38,11 @@ getData_mannerofdeath <- function(){
 }
 
 getData_race <- function(){
+  # Check Packages
+  required_packages <- c('dplyr')
+  check <- check_packages(required_packages)
+  
+  
   output <- getData() %>% 
     select(race_label) %>% 
     unique()
@@ -42,6 +51,11 @@ getData_race <- function(){
 }
 
 getData_sex <- function(){
+  # Check Packages
+  required_packages <- c('dplyr')
+  check <- check_packages(required_packages)
+  
+  
   output <- getData() %>% 
     select(sex_label) %>% 
     unique()
@@ -50,6 +64,11 @@ getData_sex <- function(){
 }
 
 getData_ethnicity <- function(){
+  # Check Packages
+  required_packages <- c('dplyr')
+  check <- check_packages(required_packages)
+  
+  
   output <- getData() %>% 
     select(ethnicity_label) %>% 
     unique()
@@ -58,6 +77,11 @@ getData_ethnicity <- function(){
 }
 
 getData_education <- function(){
+  # Check Packages
+  required_packages <- c('dplyr')
+  check <- check_packages(required_packages)
+  
+  
   output <- getData() %>% 
     select(eduction_label) %>% 
     unique()

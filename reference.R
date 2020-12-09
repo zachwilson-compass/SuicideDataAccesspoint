@@ -158,7 +158,8 @@ getGeorgiaCountyList <- function() {
               'Wilcox',
               'Wilkes',
               'Wilkinson',
-              'Worth'
+              'Worth',
+              'Unknown'
   )
   
   return(output)
